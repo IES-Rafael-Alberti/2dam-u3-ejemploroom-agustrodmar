@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/2dam-u3-ejemploroom-agustrodmar.iml" filepath="$PROJECT_DIR$/.idea/2dam-u3-ejemploroom-agustrodmar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TasksList.iml" filepath="$PROJECT_DIR$/.idea/modules/TasksList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TasksList.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TasksList.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TasksList.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TasksList.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TasksList.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TasksList.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TasksList.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TasksList.app.unitTest.iml" />
     </modules>
   </component>
 </project>
