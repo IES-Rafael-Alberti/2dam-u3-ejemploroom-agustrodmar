@@ -6,6 +6,8 @@
 
 4. **Implementación de Room.**
 
+	Comprobando push a mi rama.
+
 	Una base de datos de Room en Android es una biblioteca de persistencia que proporciona una capa de abstracción sobre SQLite. Se trata de una persistencia a nivel local.
 
 	4.1. Incluir las dependencias necesarias para utilizar Room. Las insertaremos en build.gradle.kts (Module):
