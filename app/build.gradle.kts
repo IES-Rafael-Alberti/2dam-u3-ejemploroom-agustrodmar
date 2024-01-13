@@ -77,6 +77,13 @@ dependencies {
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    //Room
+    implementation("androidx.room:room-runtime:2.5.0")
+    annotationProcessor("androidx.room:room-compiler:2.5.0")
+
+    //To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:2.5.0")
 }
 
 // DCS - Dagger Hilt - Allow references to generated code
