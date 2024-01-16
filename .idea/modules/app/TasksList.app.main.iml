@@ -73,6 +73,7 @@
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.8.22/636bf8b320e7627482771bbac9ed7246773c02bd/kotlin-stdlib-1.8.22.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.8.22/1a8e3601703ae14bb58757ea6b2d8e8e5935a586/kotlin-stdlib-common-1.8.22.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/28.0.0/ed73f5337a002d1fd24339d5fb08c2c9d9ca60d8/support-annotations-28.0.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/hilt-core/2.44/350d6f48d51701e5f26b962e8070328956595e4b/hilt-core-2.44.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.44/8e8d1b776ce69b66f46fb7862db68cfbeee4f43c/dagger-2.44.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar</arg>
@@ -216,6 +217,7 @@
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:28.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.dagger:dagger:2.44" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.dagger:hilt-core:2.44" level="project" />
