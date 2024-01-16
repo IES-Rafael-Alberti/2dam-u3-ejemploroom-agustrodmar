@@ -98,7 +98,7 @@ fun TasksScreen(tasksViewModel: TasksViewModel) {
         FabDialog(
             Modifier.align(Alignment.BottomEnd),
             onNewTask = { tasksViewModel.onShowDialogClick() }) // tengo este error desde la parte 1
-        TasksList(tasksViewModel)
+        TasksList((uiState as TaskUiState.Success).tasks, tasksViewModel)
     }
 }
 
@@ -110,7 +110,7 @@ fun FabDialog(
 
     FloatingActionButton(
         onClick = {
-            // Show dialog to add a task
+            onNewTask
         }, modifier = modifier.padding(16.dp)
     ) {
         Icon(Icons.Filled.Add, contentDescription = "")
