@@ -3,7 +3,6 @@ package com.arodmar432p.taskslist.addtasks.data
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.arodmar432p.taskslist.addtasks.ui.model.TaskModel
 import kotlinx.coroutines.flow.Flow
 
 /**

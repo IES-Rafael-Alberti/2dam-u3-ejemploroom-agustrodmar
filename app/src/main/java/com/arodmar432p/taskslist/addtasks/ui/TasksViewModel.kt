@@ -8,7 +8,6 @@ import com.arodmar432p.taskslist.addtasks.domain.AddTaskUseCase
 import com.arodmar432p.taskslist.addtasks.domain.GetTasksUseCase
 import com.arodmar432p.taskslist.addtasks.ui.model.TaskModel
 import com.arodmar432p.taskslist.addtasks.ui.TaskUiState.Success
-import com.arodmar432p.taskslist.addtasks.ui.TaskUiState.Loading
 import com.arodmar432p.taskslist.addtasks.ui.TaskUiState.Error
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -57,13 +56,13 @@ class TasksViewModel @Inject constructor(
         _myTaskText.value = ""
     }
 
-    fun onItemRemove(taskModel: TaskModel) {
+    fun onItemRemove() {
         //TODO: Código a eliminar. Falta desarrollar borrar tarea con un caso de uso y lanzarlo como corutina.
         //val task = _tasks.find { it.id == taskModel.id }
         //_tasks.remove(task)
     }
 
-    fun onCheckBoxSelected(taskModel: TaskModel) {
+    fun onCheckBoxSelected() {
         //TODO: Código a eliminar. Falta desarrollar actualizar tarea con un caso de uso y lanzarlo como corutina.
         //val index = _tasks.indexOf(taskModel)
         // _tasks[index] = _tasks[index].let { it.copy(selected = !it.selected) }
