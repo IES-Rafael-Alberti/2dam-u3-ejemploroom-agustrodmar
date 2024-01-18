@@ -85,28 +85,13 @@ fun TasksScreen(tasksViewModel: TasksViewModel) {
             }
         }
     }
-
-    Box(modifier = Modifier.fillMaxSize()) {
-        AddTasksDialog(
-            show = showDialog,
-            myTaskText = myTaskText,
-            onDismiss = { tasksViewModel.onDialogClose() },
-            onTaskAdded = { tasksViewModel.onTaskCreated() },
-            onTaskTextChanged = { tasksViewModel.onTaskTextChanged(it) }
-        )
-        FabDialog(
-            Modifier.align(Alignment.BottomEnd),
-            onNewTask = { tasksViewModel.onShowDialogClick() }) // tengo este error desde la parte 1
-        TasksList((uiState as TaskUiState.Success).tasks, tasksViewModel)
-    }
 }
 
 @Composable
 fun FabDialog(
     modifier: Modifier,
-    onNewTask: () -> Unit
+    onNewTask : () -> Unit
 ) {
-
     FloatingActionButton(
         onClick = {
             onNewTask()
@@ -115,7 +100,6 @@ fun FabDialog(
         Icon(Icons.Filled.Add, contentDescription = "")
     }
 }
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -161,22 +145,19 @@ fun AddTasksDialog(
     }
 }
 
-
 @Composable
 fun TasksList(tasks: List<TaskModel>, tasksViewModel: TasksViewModel) {
-    //Código a eliminar. Ya vamos a recibir los datos del Flow y no nos hace falta esta lista.
-    //val myTasks: List<TaskModel> = tasksViewModel.tasks
-
     LazyColumn {
         items(tasks, key = { it.id }) { task ->
             ItemTask(
                 task,
-                onTaskRemove = { tasksViewModel.onItemRemove() },
-                onTaskCheckChanged = { tasksViewModel.onCheckBoxSelected() }
+                onTaskRemove = { tasksViewModel.onItemRemove(it) },
+                onTaskCheckChanged = { tasksViewModel.onCheckBoxSelected(it) }
             )
         }
     }
 }
+
 @Composable
 fun ItemTask (
     taskModel: TaskModel,
@@ -184,12 +165,6 @@ fun ItemTask (
     onTaskCheckChanged: (TaskModel) -> Unit
 ) {
     Card(
-        //pointerInput es una función se utiliza para configurar la entrada de puntero (input)
-        //para el componente visual al que se le aplica... la detección de gestos de entrada táctil
-        //En nuestro caso queremos eliminar una tarea con el gesto de pulsación larga (onLongPress)
-        //sobre la tarea, por lo tanto el componente visual dónde aplicar el modificador debe ser el Card.
-        //En la expresión lambda no podemos utilizar it como parámetro de la llamada a onTaskRemove(it)
-        //it es el Offset y nosotros necesitamos pasarle el taskModel que debe eliminarse...
         Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp)
@@ -213,7 +188,10 @@ fun ItemTask (
             )
             Checkbox(
                 checked = taskModel.selected,
-                onCheckedChange = { onTaskCheckChanged(taskModel) }
+                onCheckedChange = {
+                    taskModel.selected = it
+                    onTaskCheckChanged(taskModel.copy(selected = it))
+                }
             )
         }
     }
